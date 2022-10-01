@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<head>
+		<title>Home Page</title>
+		
+		<style>
+			body {
+				background: lightcyan;
+				margin: 0;
+			}
+			
+			.icon {
+				font-size: 35px;
+				font-weight: 500;
+				color: black;
+				cursor: pointer;
+			}
+			.menu {
+				width: 100%;
+				background: paleturquoise;
+				overflow: auto;
+			}
+			
+			.menu ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				line-height: 60px;
+			}
+			
+			.menu li {
+				float: left;
+			}
+			
+			.menu ul li a {
+				background: darkturquoise;
+				text-decoration: none;
+				width: 130px;
+				display: block;
+				text-align: center;
+				color: white;
+				font-sixe: 18px;
+				font-family: sans-serif;
+				letter-spacing: 0.5px;
+			}
+			
+			.menu li a:hover {
+				color: #fff;
+				opacity: 0.5;
+				font-size: 19px;
+			}
+			
+			.search-box {
+				margin-top: 15px;
+				float: right;
+				margin-right: 100px;
+			}
+			
+			input[type=text] {
+				padding: 7px;
+				border: none;
+				font-size: 16px;
+				font-familty: sans-serif;
+			}
+			
+			button {
+				float: right;
+				background: turquoise;
+				color: white;
+				border-radius: 0 5px 5px 0;
+				cursor: pointer;
+				position: relative;
+				padding: 7px;
+				font-family: sans-serif;
+				border: "1";
+				font-soxe: 16px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p>----------------This is the after-login-page-----------------</p>
+		<p>----------------Click about to see more content--------------</p>
+		<div class="icon">Rate<b style="color: darkcyan;">&</b>Review</div>
+		<nav class="menu">
+			<ul>
+				<li><a href="about.html"><i class="fa fa-fw fa-tasks"></i> About</a><li>	
+			</ul>
+			
+		<form class="search-box">
+			<i class='fa fa-fw fa fa-map-marker'></i><input type="text" placeholder="By location">
+			<button><b> Search</b></button>
+		</form>
+		
+		<form class="search-box">
+			<input type="text" placeholder="Restaurants...">
+			<button><b> Search</b></button>
+		</form>
+	</body>
+</html>
