@@ -81,5 +81,13 @@ class Rating{
 		$insertRating = "INSERT INTO ".$this->itemRatingTable." (itemId, userId, ratingNumber, title, comments, created, modified) VALUES ('".$POST['itemId']."', '".$userID."', '".$POST['rating']."', '".$POST['title']."', '".$POST["comment"]."', '".date("Y-m-d H:i:s")."', '".date("Y-m-d H:i:s")."')";
 		mysqli_query($this->dbConnect, $insertRating);	
 	}
+	
+	public function deleteRating($userID, $itemId){		
+		$deleteRating = "DELETE FROM ".$this->itemRatingTable." 
+		WHERE userId='".$userID."' AND itemId = '".$itemId."'";
+		mysqli_query($this->dbConnect, $deleteRating);	
+	}
+	
+	
 }
 ?>

@@ -4,8 +4,7 @@ include 'class/Rating.php';
 $rating = new Rating();
 if(!empty($_POST['action']) && $_POST['action'] == 'userLogin') {
 	$user = $_POST['user'];
-	$pass=md5 ($_POST['pass']);
-	//$pass = $_POST['pass'];
+	$pass = hash('sha256', ($_POST['pass']));
 	$loginDetails = $rating->userLogin($user, $pass);	
 	$loginStatus = 0;
 	$userName = "";
@@ -32,7 +31,17 @@ if(!empty($_POST['action']) && $_POST['action'] == 'saveRating'
 			"success"	=> 1,	
 		);
 		echo json_encode($data);		
+	}
+
+if(!empty($_GET['action']) && $_GET['action'] == 'deleteRating' 
+	&& !empty($_SESSION['userid'])
+	&& !empty($_SESSION['item_id']) ){
+		$userID = $_SESSION['userid'];	
+		$itemId = $_SESSION['item_id'];	
+		$rating->deleteRating($userID, $itemId);	
+		header("Location:index.php");	
 }
+
 if(!empty($_GET['action']) && $_GET['action'] == 'logout') {
 	session_unset();
 	session_destroy();

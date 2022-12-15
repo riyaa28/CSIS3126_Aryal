@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['item_id'] = $_GET['item_id'];
 include('inc/header.php');
 ?>
 <title>Restro Star Rating System</title>
@@ -162,7 +163,7 @@ include('inc/header.php');
 				</div>
 			</div>		
 			<div class = "col-sm-3">
-				<button type="button" id="rateProduct" class="btn btn-info <?php if(!empty($_SESSION['userid']) && $_SESSION['userid']){ echo 'login';} ?>">Rate and review</button>
+				<button type="button" id="rateProduct" class="btn btn-info <?php if(!empty($_SESSION['userid']) && $_SESSION['userid']){ echo 'login';} ?>">Write Review</button>
 			</div>		
 		</div>
 		<div class = "row">
@@ -174,7 +175,7 @@ include('inc/header.php');
 				foreach($itemRating as $rating){				
 					$date=date_create($rating['created']);
 					$reviewDate = date_format($date,"M d, Y");						
-					$profilePic = "profile.png";	
+					$profilePic = "user.png";	
 					if($rating['avatar']) {
 						$profilePic = $rating['avatar'];	
 					}
@@ -214,7 +215,7 @@ include('inc/header.php');
 			<div class = "col-sm-12">
 				<form id = "ratingForm" method="POST">					
 					<div class = "form-group">
-						<h4>Rate this product:</h4>
+						<h4>Rate this restaurant:</h4>
 						<button type="button" class="btn btn-warning btn-sm rateButton" aria-label="Left Align">
 						  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 						</button>

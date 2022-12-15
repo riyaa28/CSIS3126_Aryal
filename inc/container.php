@@ -14,8 +14,8 @@
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="./index.php"><i class="fa fa-fw fa-home"></i> <b>Home</b></a></li>
-				<li class="active"><a href="./register.php"><i class="fa fa-fw fa-user"></i> <b>Register here</b></a></li>
-				<li class="active">
+				<li class="active"><a href="./register.php"><i class="fa fa-fw fa-user"></i> <b>Register</b></a></li>
+				<li class="active"><a href ="./help.php"><i class="fa fa-question-circle"></i> <b>Help</b></a></li>
 				  
 				</li>
             </ul>
@@ -31,7 +31,7 @@
 			</form>
 
         </div>
-    </div><!--/.nav-collapse -->
+    </div>
 </div>
     
 <!--	

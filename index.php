@@ -26,7 +26,7 @@ include('inc/header.php');
 			<h4 style = "margin-top:10px;"><?php echo $item["name"]; ?></h4>
 			<div><span class = "average"><?php printf('%.1f', $average); ?> <small>/ 5</small></span> <span class="rating-reviews"><a href="show_rating.php?item_id=<?php echo $item["id"]; ?>">Rating & Reviews</a></span></div>
 			<?php echo $item["description"]; ?>		
-			</div>		
+			</div>
 		</div>
 		<?php 
 			} 
